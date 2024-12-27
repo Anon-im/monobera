@@ -85,14 +85,14 @@ export const useHoneyEvents = () => {
       typeof burnData[burnDataSize - 1] === "undefined");
 
   const isAllDataEmpty = allData?.[0]?.length === 0;
-  const isSwapDataEmpty = mintData?.[0]?.length === 0;
+  const isMintDataEmpty = mintData?.[0]?.length === 0;
   const isBurnDataEmpty = burnData?.[0]?.length === 0;
 
   const isAllDataReachingEnd =
     isAllDataEmpty ||
     (allData && allData[allData.length - 1]?.length < DEFAULT_SIZE);
   const isMintDataReachingEnd =
-    isSwapDataEmpty ||
+    isMintDataEmpty ||
     (mintData && mintData[mintData.length - 1]?.length < DEFAULT_SIZE);
   const isBurnDataReachingEnd =
     isBurnDataEmpty ||
